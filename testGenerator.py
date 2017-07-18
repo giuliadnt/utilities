@@ -48,9 +48,9 @@ def fill_xml(xml_head, categories_dict, phrases_dict_generator):
 	while count < len(categories_dict):
 		for categories, utterance in utterances_dict_generator:
 			Test = ET.SubElement(xml_head, "Test", id=str(count), description=intent)
-			step1 = ET.SubElement(Test, "step").text="[noInput]"
-			step2 = ET.SubElement(Test, "step").text="[noInput]"
-			step3 = ET.SubElement(Test, "step").text= utterance
+			step1 = ET.SubElement(Test, "step").text= utterance
+			step2 = ET.SubElement(Test, "step").text= ""
+			step3 = ET.SubElement(Test, "step").text= ""
 			count +=1
 	
 
